@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scave:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scave="http://www.omnetpp.org/omnetpp/scave">
+  <inputs>
+    <inputs name="/TestInet/src/results/IecNetwork-*.vec"/>
+    <inputs name="/TestInet/src/results/IecNetwork-*.sca"/>
+  </inputs>
+  <datasets>
+    <datasets name="rcvdPk:count">
+      <items xsi:type="scave:Add" filterPattern="module(Bay.iecNportSwitch.gate[0].queue.queue4) AND name(rcvdPk:count)"/>
+      <items xsi:type="scave:Add" filterPattern="module(Bay.iecNportSwitch.gate[0].queue.queue5) AND name(rcvdPk:count)"/>
+      <items xsi:type="scave:Add" filterPattern="module(Bay.iecNportSwitch.gate[0].queue.queue6) AND name(rcvdPk:count)"/>
+      <items xsi:type="scave:Add" filterPattern="module(Bay.iecNportSwitch.gate[0].queue.queue4) AND name(rcvdPk:count)"/>
+      <items xsi:type="scave:BarChart" name="rcvdPk:count"/>
+    </datasets>
+    <datasets name="queueingTime:vector">
+      <items xsi:type="scave:Add" filterPattern="module(Bay.iecNportSwitch.gate[0].queue.queue6) AND name(queueingTime:vector)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(Bay.iecNportSwitch.gate[0].queue.queue5) AND name(queueingTime:vector)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(Bay.iecNportSwitch.gate[1].queue.queue4) AND name(queueingTime:vector)" type="VECTOR"/>
+      <items xsi:type="scave:Add" filterPattern="module(Bay.iecNportSwitch.gate[0].queue.queue4) AND name(queueingTime:vector)" type="VECTOR"/>
+      <items xsi:type="scave:LineChart" name="queueingTime:vector"/>
+    </datasets>
+  </datasets>
+  <chartSheets/>
+</scave:Analysis>

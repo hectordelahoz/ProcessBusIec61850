@@ -1,0 +1,3 @@
+package testinet;
+
+@license(LGPL);
